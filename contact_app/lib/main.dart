@@ -24,21 +24,23 @@ class MyApp extends StatelessWidget {
           ],
         ),
         body: Container(
-            width: double.infinity,
-            height: double.infinity,
-            child: ListView.builder(
-                itemCount: 20,
-                itemBuilder: (context, i) {
-                  return ListTile(
-                    leading: Icon(
-                      Icons.person,
-                      size: 40,
-                    ),
-                    title: Text("Abdullah Al Ziad"),
-                    subtitle: Text("CEO at Ziad For You"),
-                    trailing: Icon(Icons.call),
-                  );
-                })),
+          width: double.infinity,
+          height: double.infinity,
+          child: ListView.builder(
+            itemCount: 20,
+            itemBuilder: (context, i) {
+              return const ListTile(
+                leading: Icon(
+                  Icons.person,
+                  size: 40,
+                ),
+                title: Text("Abdullah Al Ziad"),
+                subtitle: Text("CEO at Ziad For You"),
+                trailing: Icon(Icons.call),
+              );
+            },
+          ),
+        ),
       ),
     );
   }
