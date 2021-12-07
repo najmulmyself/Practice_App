@@ -29,7 +29,21 @@ class MyApp extends StatelessWidget {
             children: [
               Container(
                 child: Image.asset("assets/images/cars.png"),
-              )
+              ),
+              Text(
+                "Book Your Ride",
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blueAccent.shade400),
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text("Get a Car"),
+              ),
             ],
           ),
         ),
