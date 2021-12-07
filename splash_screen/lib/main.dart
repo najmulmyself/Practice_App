@@ -9,15 +9,31 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // title: 'Material Appflasfjsladf',
       home: Scaffold(
-          appBar: AppBar(
-            leading: Icon(Icons.menu_open),
-            backgroundColor: Colors.redAccent.shade100,
-            elevation: 0,
+        appBar: AppBar(
+          leading: const Padding(
+            padding: const EdgeInsets.only(left: 18.0),
+            child: Icon(
+              Icons.menu_open,
+              color: Colors.black,
+              size: 30,
+            ),
           ),
-          body: Container(
-            color: Colors.redAccent.shade100,
-            width: double.infinity,
-          )),
+          backgroundColor: Colors.white10,
+          elevation: 0,
+        ),
+        body: Container(
+          color: Colors.white10,
+          // width: double.infinity,
+          // height: double.infinity,
+          child: Column(
+            children: [
+              Container(
+                child: Image.asset("assets/images/cars.png"),
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
