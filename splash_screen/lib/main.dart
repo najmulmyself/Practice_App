@@ -9,40 +9,49 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // title: 'Material Appflasfjsladf',
       home: Scaffold(
-        appBar: AppBar(
-          leading: const Padding(
-            padding: const EdgeInsets.only(left: 18.0),
-            child: Icon(
-              Icons.menu_open,
-              color: Colors.black,
-              size: 30,
-            ),
-          ),
-          backgroundColor: Colors.white10,
-          elevation: 0,
-        ),
+        // appBar: AppBar(
+        //   leading: const Padding(
+        //     padding: const EdgeInsets.only(left: 18.0),
+        //     child: Icon(
+        //       Icons.menu_open,
+        //       color: Colors.black,
+        //       size: 30,
+        //     ),
+        //   ),
+        //   backgroundColor: Colors.white10,
+        //   elevation: 0,
+        // ),
         body: Container(
-          color: Colors.white10,
+          color: (Color(0xff27292A)),
           // width: double.infinity,
           // height: double.infinity,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                child: Image.asset("assets/images/cars.png"),
+                child: Image.asset("assets/images/facebook.png"),
+                width: double.infinity,
+                height: 100,
               ),
-              Text(
-                "Book Your Ride",
-                style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blueAccent.shade400),
-              ),
+              // Text(
+              //   "Book Your Ride",
+              //   style: TextStyle(
+              //       fontSize: 30,
+              //       fontWeight: FontWeight.bold,
+              //       color: Colors.blueAccent.shade400),
+              // ),
               const SizedBox(
                 height: 40,
               ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text("Get a Car"),
+              // ElevatedButton(
+              //   onPressed: () {},
+              //   child: Text("Get a Car"),
+              // ),
+              Column(
+                // mainAxisAlignment: ,
+                children: [
+                  Text("from"),
+                ],
               ),
             ],
           ),
