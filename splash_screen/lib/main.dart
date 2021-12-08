@@ -125,12 +125,33 @@ class MyApp extends StatelessWidget {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color(0xffAAD6FF),
-                Color(0xffAAD6BB),
+                Color(0xffA6BCF0),
+                Color(0xff356AE4),
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
+          ),
+          width: double.infinity,
+          height: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                child: Image.asset("assets/images/Logo.png"),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                "My Music",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                  color: Colors.white70,
+                ),
+              ),
+            ],
           ),
         ),
       ),
