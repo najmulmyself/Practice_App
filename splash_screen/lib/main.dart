@@ -61,6 +61,57 @@
 //   }
 // }
 
+// import 'package:flutter/material.dart';
+
+// void main() => runApp(MyApp());
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       title: 'Material App',
+//       home: Scaffold(
+//         body: Container(
+//           width: double.infinity,
+//           height: double.infinity,
+//           color: (Color(0xff27292A)),
+//           child: Container(
+//             child: Column(
+//               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//               children: [
+//                 Container(
+//                   height: 100,
+//                   child: Image.asset("assets/images/facebook.png"),
+//                 ),
+//                 SizedBox(
+//                   height: 278,
+//                 ),
+//                 Text(
+//                   "from",
+//                   style: TextStyle(
+//                     color: Colors.white,
+//                     fontSize: 20,
+//                   ),
+//                 ),
+//                 Padding(
+//                   padding: const EdgeInsets.only(top: 0.0),
+//                   child: Container(
+//                     height: 30,
+//                     child: Image.asset("assets/images/meta.png"),
+//                   ),
+//                 ),
+//               ],
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -69,21 +120,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: Scaffold(
-          body: Container(
-              width: double.infinity,
-              color: (Color(0xff27292A)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 100,
-                    child: Image.asset("assets/images/facebook.png"),
-                  ),
-                ],
-              ))),
+        appBar: AppBar(
+          title: Text('Material App Bar'),
+        ),
+        body: Center(
+          child: Container(
+            child: Text('Hello World'),
+          ),
+        ),
+      ),
     );
   }
 }
