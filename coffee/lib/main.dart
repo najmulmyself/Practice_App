@@ -98,6 +98,155 @@ class MyApp extends StatelessWidget {
                         ),
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: Colors.white,
+                            ),
+                            child: Expanded(
+                              flex: 1,
+                              child: Container(
+                                width: 90,
+                                height: 30,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 4.0,
+                                    left: 10,
+                                  ),
+                                  child: Text(
+                                    "Oat Milk",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 17,
+                                    ),
+                                  ),
+                                ),
+                                // color: Colors.red,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(left: 17.0, right: 17.0),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(color: Colors.white),
+                              ),
+                              child: Expanded(
+                                flex: 1,
+                                child: Container(
+                                  width: 90,
+                                  height: 30,
+                                  // color: Colors.red,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                      top: 4.0,
+                                      left: 10,
+                                    ),
+                                    child: Text(
+                                      "Soy Milk",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 17,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(color: Colors.white),
+                            ),
+                            child: Expanded(
+                              flex: 1,
+                              child: Container(
+                                width: 90,
+                                height: 30,
+                                // color: Colors.red,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 4.0,
+                                    left: 10,
+                                  ),
+                                  child: Text(
+                                    "Moy Milk",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 17,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          // Padding(
+                          //   padding: const EdgeInsets.all(8.0),
+                          //   child: Expanded(
+                          //     flex: 1,
+                          //     child: Container(
+                          //       width: 90,
+                          //       height: 20,
+                          //       color: Colors.red,
+                          //     ),
+                          //   ),
+                          // ),
+                          // Expanded(
+                          //   flex: 1,
+                          //   child: Container(
+                          //     width: 90,
+                          //     height: 20,
+                          //     color: Colors.red,
+                          //   ),
+                          // ),
+                        ],
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 58.0),
+                          child: Column(
+                            children: [
+                              Text(
+                                "Price",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8.0),
+                                child: Text(
+                                  "\$122",
+                                  style: TextStyle(
+                                      fontSize: 25, color: Colors.white),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.white),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 50, right: 50),
+                            child: Text(
+                              "BUY NOW",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),
