@@ -122,7 +122,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       home: Scaffold(
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
                 Color(0xffA6BCF0),
@@ -140,10 +140,10 @@ class MyApp extends StatelessWidget {
               Container(
                 child: Image.asset("assets/images/Logo.png"),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Text(
+              const Text(
                 "My Music",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
