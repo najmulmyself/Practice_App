@@ -115,10 +115,166 @@ class MyApp extends StatelessWidget {
 
             //Card//
 
-            Container(
-              width: 300,
-              height: 100,
-              color: Colors.amberAccent,
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(18.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Color(0xff7E65FF),
+                    ),
+                    width: 300,
+                    height: 100,
+                    child: Padding(
+                      padding: const EdgeInsets.all(9.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "this morning's meeting. we have to improve the quality of office facility and another...",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 25,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "09/12/21",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Icon(
+                                Icons.push_pin,
+                                color: Colors.white,
+                                size: 15,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+                //Card 2//
+                Padding(
+                  padding: const EdgeInsets.all(18.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Color(0xff7E65FF),
+                    ),
+                    width: 300,
+                    height: 110,
+                    child: Padding(
+                      padding: const EdgeInsets.all(9.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "need for this month:",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            "- clothes",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            "- snack",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 25,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "11/12/21",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+                //Card 3//
+                Padding(
+                  padding: const EdgeInsets.all(18.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Color(0xff7E65FF),
+                    ),
+                    width: 300,
+                    height: 110,
+                    child: Padding(
+                      padding: const EdgeInsets.all(9.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Message from Liam:",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            "Don't forget to complete assignment on Tuesday",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 25,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "10/12/21",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 25, right: 28.0),
+                  child: FloatingActionButton(
+                    onPressed: () {},
+                    child: Icon(Icons.add),
+                    backgroundColor: Color(0xff7E65FF),
+                  ),
+                ),
+              ],
             )
           ],
         ),
