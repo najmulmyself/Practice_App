@@ -28,7 +28,13 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: Container(),
+        body: Container(
+          child: Stack(
+            children: [
+              Container()
+            ],
+          ),
+        ),
       ),
     );
   }
