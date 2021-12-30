@@ -1,5 +1,7 @@
 # tap_tap_game
 
+<img src="tap-tap-game.gif" alt="game_preview" width="200"/>
+
 A new Flutter project.
 
 ## Getting Started
