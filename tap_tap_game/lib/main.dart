@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
                         child: Container(
                           width: double.infinity,
                           height: double.infinity,
-                          color: Colors.teal.shade100,
+                          color: Colors.red.shade300,
                         ),
                       ),
                     ),
@@ -54,7 +54,7 @@ class _MyAppState extends State<MyApp> {
                         child: Container(
                           width: double.infinity,
                           height: double.infinity,
-                          color: Colors.purple.shade100,
+                          color: Colors.green.shade300,
                         ),
                       ),
                     ),
@@ -65,7 +65,15 @@ class _MyAppState extends State<MyApp> {
                   ? Container(
                       width: double.infinity,
                       height: double.infinity,
-                      color: Colors.green.shade300.withOpacity(0.7),
+                      color: countTop >= 95
+                          ? Colors.red.withOpacity(0.6)
+                          : Colors.green.withOpacity(0.6),
+                      child: Center(
+                        child: Text(
+                          countTop >= 95 ? "Red Wins!" : "Green Wins!",
+                          style: TextStyle(fontSize: 50),
+                        ),
+                      ),
                     )
                   : Text(""),
             ],
