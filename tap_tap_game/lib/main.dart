@@ -17,47 +17,58 @@ class _MyAppState extends State<MyApp> {
       title: 'Material App',
       home: Scaffold(
         body: SafeArea(
-          child: Container(
-            width: double.infinity,
-            height: double.infinity,
-            child: Column(
-              children: [
-                Expanded(
-                  flex: countTop,
-                  child: GestureDetector(
-                    onTap: () {
-                      print("tapped top");
-                      setState(() {
-                        countTop = countTop + 4;
-                        countBottom = countBottom - 4;
-                      });
-                    },
-                    child: Container(
+          child: Stack(
+            children: [
+              Container(
+                width: double.infinity,
+                height: double.infinity,
+                child: Column(
+                  children: [
+                    Expanded(
+                      flex: countTop,
+                      child: GestureDetector(
+                        onTap: () {
+                          print("tapped top");
+                          setState(() {
+                            countTop = countTop + 4;
+                            countBottom = countBottom - 4;
+                          });
+                        },
+                        child: Container(
+                          width: double.infinity,
+                          height: double.infinity,
+                          color: Colors.teal.shade100,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: countBottom,
+                      child: GestureDetector(
+                        onTap: () {
+                          print("tapped bottom");
+                          setState(() {
+                            countBottom = countBottom + 4;
+                            countTop = countTop - 4;
+                          });
+                        },
+                        child: Container(
+                          width: double.infinity,
+                          height: double.infinity,
+                          color: Colors.purple.shade100,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              countTop >= 95 || countBottom >= 95
+                  ? Container(
                       width: double.infinity,
                       height: double.infinity,
-                      color: Colors.teal.shade100,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  flex: countBottom,
-                  child: GestureDetector(
-                    onTap: () {
-                      print("tapped bottom");
-                      setState(() {
-                        countBottom = countBottom + 4;
-                        countTop = countTop - 4;
-                      });
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      color: Colors.purple.shade100,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+                      color: Colors.green.shade300.withOpacity(0.7),
+                    )
+                  : Text(""),
+            ],
           ),
         ),
       ),
