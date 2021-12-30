@@ -9,12 +9,30 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Material App Bar'),
-        ),
-        body: Center(
+        body: SafeArea(
           child: Container(
-            child: Text('Hello World'),
+            width: double.infinity,
+            height: double.infinity,
+            child: Column(
+              children: [
+                Expanded(
+                  flex: 50,
+                  child: Container(
+                    width: double.infinity,
+                    height: double.infinity,
+                    color: Colors.teal.shade100,
+                  ),
+                ),
+                Expanded(
+                  flex: 50,
+                  child: Container(
+                    width: double.infinity,
+                    height: double.infinity,
+                    color: Colors.purple.shade100,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
