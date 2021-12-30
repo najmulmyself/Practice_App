@@ -38,6 +38,10 @@ class _MyAppState extends State<MyApp> {
                           width: double.infinity,
                           height: double.infinity,
                           color: Colors.red.shade300,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Points: $countTop"),
+                          ),
                         ),
                       ),
                     ),
@@ -55,6 +59,10 @@ class _MyAppState extends State<MyApp> {
                           width: double.infinity,
                           height: double.infinity,
                           color: Colors.green.shade300,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Points: $countBottom"),
+                          ),
                         ),
                       ),
                     ),
@@ -69,9 +77,23 @@ class _MyAppState extends State<MyApp> {
                           ? Colors.red.withOpacity(0.6)
                           : Colors.green.withOpacity(0.6),
                       child: Center(
-                        child: Text(
-                          countTop >= 95 ? "Red Wins!" : "Green Wins!",
-                          style: TextStyle(fontSize: 50),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              countTop >= 95 ? "Red Wins!" : "Green Wins!",
+                              style: TextStyle(fontSize: 50),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                setState(() {
+                                  countTop = 50;
+                                  countBottom = 50;
+                                });
+                              },
+                              child: Text("Reset Game"),
+                            ),
+                          ],
                         ),
                       ),
                     )
