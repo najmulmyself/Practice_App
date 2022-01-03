@@ -4,6 +4,11 @@ import 'package:audioplayers/audioplayers.dart';
 void main() => runApp(Xylophone());
 
 class Xylophone extends StatelessWidget {
+  void playSound(int soundName) {
+    final player = AudioCache();
+    player.play("note1.wav");
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,50 +23,43 @@ class Xylophone extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play("note1.wav");
+                    playSound(1);
                   },
                   child: Text("Click me"),
                 ),
                 TextButton(
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play("note1.wav");
+                    playSound(2);
                   },
                   child: Text("Click me"),
                 ),
                 TextButton(
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play("note1.wav");
+                    playSound(3);
                   },
                   child: Text("Click me"),
                 ),
                 TextButton(
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play("note1.wav");
+                    playSound(4);
                   },
                   child: Text("Click me"),
                 ),
                 TextButton(
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play("note1.wav");
+                    playSound(5);
                   },
                   child: Text("Click me"),
                 ),
                 TextButton(
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play("note1.wav");
+                    playSound(6);
                   },
                   child: Text("Click me"),
                 ),
                 TextButton(
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play("note1.wav");
+                    playSound(7);
                   },
                   child: Text("Click me"),
                 ),
