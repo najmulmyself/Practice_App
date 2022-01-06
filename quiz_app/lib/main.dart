@@ -55,6 +55,7 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
+  List checkMark = [];
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -91,6 +92,15 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                setState(
+                  () {
+                    checkMark.add(
+                      Container(
+                        child: Icon(Icons.check),
+                      ),
+                    );
+                  },
+                );
                 //The user picked true.
               },
             ),
@@ -115,6 +125,14 @@ class _QuizPageState extends State<QuizPage> {
           ),
         ),
         //TODO: Add a Row here as your score keeper
+        Row(
+          children: [
+            Icon(
+              Icons.check,
+              color: Colors.green,
+            ),
+          ],
+        )
       ],
     );
   }
