@@ -1,32 +1,3 @@
-// import 'package:flutter/material.dart';
-
-// void main() => runApp(MyApp());
-
-// class MyApp extends StatefulWidget {
-//   @override
-//   State<MyApp> createState() => _MyAppState();
-// }
-
-// class _MyAppState extends State<MyApp> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Material App',
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text('Material App Bar'),
-//         ),
-//         body: Center(
-//           child: Container(
-//             child: Text('Hello World'),
-//             //need to change something
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 
 void main() => runApp(Quizzler());
@@ -55,7 +26,20 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-  List checkMark = [];
+  List<Widget> checkMark = [
+    Icon(
+      Icons.check,
+      color: Colors.green,
+    ),
+    Icon(
+      Icons.check,
+      color: Colors.green,
+    ),
+    Icon(
+      Icons.check,
+      color: Colors.green,
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -95,8 +79,9 @@ class _QuizPageState extends State<QuizPage> {
                 setState(
                   () {
                     checkMark.add(
-                      Container(
-                        child: Icon(Icons.check),
+                      Icon(
+                        Icons.check,
+                        color: Colors.green,
                       ),
                     );
                   },
@@ -119,6 +104,16 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                setState(
+                  () {
+                    checkMark.add(
+                      Icon(
+                        Icons.close,
+                        color: Colors.red,
+                      ),
+                    );
+                  },
+                );
                 //The user picked false.
               },
             ),
@@ -126,13 +121,8 @@ class _QuizPageState extends State<QuizPage> {
         ),
         //TODO: Add a Row here as your score keeper
         Row(
-          children: [
-            Icon(
-              Icons.check,
-              color: Colors.green,
-            ),
-          ],
-        )
+          children: checkMark,
+        ),
       ],
     );
   }
