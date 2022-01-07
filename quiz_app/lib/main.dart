@@ -33,6 +33,11 @@ class _QuizPageState extends State<QuizPage> {
     'A slug\'s blood is green.'
   ];
   int questionNumber = 0;
+  List answer = [
+    false,
+    true,
+    true,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -72,6 +77,12 @@ class _QuizPageState extends State<QuizPage> {
               onPressed: () {
                 setState(
                   () {
+                    bool correctAns = answer[questionNumber];
+                    if (correctAns == true) {
+                      print("you got the right ans");
+                    } else {
+                      print("you got it wrong");
+                    }
                     questionNumber++;
                     checkMark.add(
                       Icon(
@@ -101,6 +112,12 @@ class _QuizPageState extends State<QuizPage> {
               onPressed: () {
                 setState(
                   () {
+                    bool correctAns = answer[questionNumber];
+                    if (correctAns == false) {
+                      print("you got the right ans");
+                    } else {
+                      print("you got it wrong");
+                    }
                     questionNumber++;
                     checkMark.add(
                       Icon(
