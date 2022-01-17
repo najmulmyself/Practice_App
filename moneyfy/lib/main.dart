@@ -17,6 +17,12 @@ class MyApp extends StatelessWidget {
       amount: 40.15,
       date: DateTime.now(),
     ),
+    Transactions(
+      id: 3,
+      title: "Shirt",
+      amount: 50.15,
+      date: DateTime.now(),
+    ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -27,12 +33,32 @@ class MyApp extends StatelessWidget {
             title: Text('Material App Bar'),
           ),
           body: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Card(
                 child: Text("Hello"),
               ),
-              Card(
-                child: Text("World"),
+              Column(
+                children: transactions
+                    .map(
+                      (tx) => Card(
+                        child: Row(
+                          children: [
+                            Container(
+                              child: Text(tx.amount.toString()),
+                            ),
+                            Column(
+                              children: [
+                                Text(tx.title),
+                                Text(tx.date.toString()),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    )
+                    .toList(),
               ),
             ],
           )),
