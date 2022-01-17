@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moneyfy/transaction.dart';
+import 'package:intl/intl.dart';
 
 void main() => runApp(MyApp());
 
@@ -84,7 +85,7 @@ class MyApp extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                tx.date.toString(),
+                                DateFormat.yMMMd().format(tx.date),
                                 style: TextStyle(
                                   fontSize: 16,
                                 ),
