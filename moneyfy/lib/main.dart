@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
     Transactions(
       id: 1,
       title: "New Shoes",
-      amount: 60.20,
+      amount: 60.22,
       date: DateTime.now(),
     ),
     Transactions(
@@ -23,45 +23,83 @@ class MyApp extends StatelessWidget {
       amount: 50.15,
       date: DateTime.now(),
     ),
+    Transactions(
+      id: 4,
+      title: "Shorts",
+      amount: 55.15,
+      date: DateTime.now(),
+    ),
   ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
       home: Scaffold(
-          appBar: AppBar(
-            title: Text('Material App Bar'),
-          ),
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Card(
-                child: Text("Hello"),
-              ),
-              Column(
-                children: transactions
-                    .map(
-                      (tx) => Card(
-                        child: Row(
-                          children: [
-                            Container(
-                              child: Text(tx.amount.toString()),
+        appBar: AppBar(
+          title: Text('Material App Bar'),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Card(
+              child: Text("Hello"),
+            ),
+            Column(
+              children: transactions
+                  .map(
+                    (tx) => Card(
+                      child: Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.symmetric(
+                              vertical: 10,
+                              horizontal: 15,
                             ),
-                            Column(
-                              children: [
-                                Text(tx.title),
-                                Text(tx.date.toString()),
-                              ],
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.purple,
+                                width: 2,
+                              ),
                             ),
-                          ],
-                        ),
+                            // child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(
+                              '\$${tx.amount}'.toString(),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.purple),
+                            ),
+                            // ),
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                tx.title,
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                tx.date.toString(),
+                                style: TextStyle(
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                    )
-                    .toList(),
-              ),
-            ],
-          )),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
