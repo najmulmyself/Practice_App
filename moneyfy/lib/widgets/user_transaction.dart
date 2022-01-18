@@ -1,49 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:moneyfy/models/transaction.dart';
 
-class NewTransaction extends StatelessWidget {
+import 'new_transaction.dart';
+import 'transaction_list.dart';
 
-final title = TextEditingController();
-final amount = TextEditingController();
+class UserTransaction extends StatefulWidget {
+  const UserTransaction({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Card(
-              elevation: 5,
-              child: Container(
-                padding: EdgeInsets.all(10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    TextField(
-                      decoration: InputDecoration(labelText: "Text"),
-                      // onChanged: (value) {
-                      //   title = value;
-                      //   print(title);
-                      // },
+  _UserTransactionState createState() => _UserTransactionState();
+}
 
-                      controller: title,
-                    ),
-                    TextField(
-                      decoration: InputDecoration(labelText: "Amount"),
-                      // onChanged: (value) {
-                      //   amount = value;
-                      //   print(amount);
-                      // },
-                      controller: amount,
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        print(title.text);
-                        print(amount.text);
-                      },
-                      child: Text(
-                        'Add Transaction',
-                        style: TextStyle(color: Colors.purple),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            );
+class _UserTransactionState extends State<UserTransaction> {
+  final List _userTransactions = [
+    Transactions(
+      id: 1,
+      title: "New Shoes",
+      amount: 60.22,
+      date: DateTime.now(),
+    ),
+    Transactions(
+      id: 2,
+      title: "Grocery",
+      amount: 40.15,
+      date: DateTime.now(),
+    ),
+    Transactions(
+      id: 3,
+      title: "Shirt",
+      amount: 50.15,
+      date: DateTime.now(),
+    ),
+    Transactions(
+      id: 4,
+      title: "Shorts",
+      amount: 55.15,
+      date: DateTime.now(),
+    ),
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        NewTransaction(),
+        TransactionList(_userTransactions),
+      ],
+    );
   }
 }
