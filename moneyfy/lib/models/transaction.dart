@@ -1,5 +1,5 @@
 class Transactions {
-  int? id;
+  dynamic ? id;
   String? title;
   double? amount;
   DateTime? date;

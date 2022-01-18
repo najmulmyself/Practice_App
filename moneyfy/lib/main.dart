@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moneyfy/models/transaction.dart';
 import 'package:intl/intl.dart';
+import 'package:moneyfy/widgets/user_transaction.dart';
 // import 'package:moneyfy/widgets/transaction_list.dart';
 // import 'package:moneyfy/widgets/user_transaction.dart';
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
             Card(
               child: Text("Hello"),
             ),
-            
+            UserTransaction(),
           ],
         ),
       ),

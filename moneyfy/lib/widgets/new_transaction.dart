@@ -4,6 +4,15 @@ class NewTransaction extends StatelessWidget {
   // const NewTransaction({ Key? key }) : super(key: key);
   final title = TextEditingController();
   final amount = TextEditingController();
+//  THIS IS USED TO ACCEPT THE FUNCTION WHICH PASSED FROM ANOTHER FILE;
+//  NEWTRANSACTION REALISED THAT , OKAY HOWEVER I GOT WILL STORE IN ADDTX;
+//  REMEMBER THE CONSTRUCTOR METHOD;
+
+  final Function addTx;
+
+  NewTransaction(this.addTx);
+
+///////////////////////////////////////////////////
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +42,7 @@ class NewTransaction extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                print(title.text);
-                print(amount.text);
+                addTx(title.text, double.parse(amount.text));
               },
               child: Text(
                 'Add Transaction',

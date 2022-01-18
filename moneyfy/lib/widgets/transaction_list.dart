@@ -3,10 +3,11 @@ import 'package:intl/intl.dart';
 import '../models/transaction.dart';
 
 class TransactionList extends StatelessWidget {
-
   final List transaction;
   TransactionList(this.transaction);
-  
+
+  //need to convert stateless widget
+
   @override
   Widget build(BuildContext context) {
     return Column(
