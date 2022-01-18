@@ -31,6 +31,10 @@ class MyApp extends StatelessWidget {
       date: DateTime.now(),
     ),
   ];
+  // String? title;
+  // String? amount;
+  final title = TextEditingController();
+  final amount = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -55,12 +59,26 @@ class MyApp extends StatelessWidget {
                   children: [
                     TextField(
                       decoration: InputDecoration(labelText: "Text"),
+                      // onChanged: (value) {
+                      //   title = value;
+                      //   print(title);
+                      // },
+
+                      controller: title,
                     ),
                     TextField(
                       decoration: InputDecoration(labelText: "Amount"),
+                      // onChanged: (value) {
+                      //   amount = value;
+                      //   print(amount);
+                      // },
+                      controller: amount,
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        print(title.text);
+                        print(amount.text);
+                      },
                       child: Text(
                         'Add Transaction',
                         style: TextStyle(color: Colors.purple),
