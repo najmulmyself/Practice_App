@@ -40,11 +40,35 @@ class MyApp extends StatelessWidget {
           title: Text('Material App Bar'),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Card(
               child: Text("Hello"),
+            ),
+            Card(
+              elevation: 5,
+              child: Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(labelText: "Text"),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: "Amount"),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Add Transaction',
+                        style: TextStyle(color: Colors.purple),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
             Column(
               children: transactions
@@ -52,6 +76,7 @@ class MyApp extends StatelessWidget {
                     (tx) => Card(
                       child: Row(
                         children: [
+                          SingleChildScrollView(),
                           Container(
                             margin: EdgeInsets.symmetric(
                               vertical: 10,
