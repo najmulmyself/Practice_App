@@ -75,6 +75,7 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.purple,
         // colorScheme: ColorScheme(primary: , primaryVariant: primaryVariant, secondary: secondary, secondaryVariant: secondaryVariant, surface: surface, background: background, error: error, onPrimary: onPrimary, onSecondary: onSecondary, onSurface: onSurface, onBackground: onBackground, onError: onError, brightness: brightness),
         accentColor: Colors.purple,
+        fontFamily: 'QuickSand',
       ),
       debugShowCheckedModeBanner: false,
       title: 'Material App',
