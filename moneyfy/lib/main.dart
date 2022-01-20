@@ -71,12 +71,18 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+        // colorScheme: ColorScheme(primary: , primaryVariant: primaryVariant, secondary: secondary, secondaryVariant: secondaryVariant, surface: surface, background: background, error: error, onPrimary: onPrimary, onSecondary: onSecondary, onSurface: onSurface, onBackground: onBackground, onError: onError, brightness: brightness),
+        accentColor: Colors.purple,
+      ),
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: Builder(builder: (context) {
         // need to add builder for separate context.
         return Scaffold(
           appBar: AppBar(
+            backgroundColor: Theme.of(context).accentColor,
             title: Text('Material App Bar'),
             actions: [
               IconButton(
