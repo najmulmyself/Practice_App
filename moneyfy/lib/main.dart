@@ -72,35 +72,40 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Material App Bar'),
-          actions: [
-            IconButton(
-              onPressed: () => _startAddNewTransaction(context),
-              icon: Icon(Icons.add),
-            ),
-          ],
-        ),
-        body: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Card(
-                child: Text("Hello"),
+      home: Builder(builder: (context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text('Material App Bar'),
+            actions: [
+              IconButton(
+                onPressed: () => _startAddNewTransaction(context),
+                icon: Icon(Icons.add),
               ),
-              // UserTransaction(),
-              TransactionList(_userTransactions),
             ],
           ),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => _startAddNewTransaction(context),
-          child: Icon(Icons.add),
-        ),
-      ),
+          body: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Card(
+                  child: Text("Hello"),
+                ),
+                // UserTransaction(),
+                TransactionList(_userTransactions),
+              ],
+            ),
+          ),
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerFloat,
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              _startAddNewTransaction(context);
+            },
+            child: Icon(Icons.add),
+          ),
+        );
+      }),
     );
   }
 }
