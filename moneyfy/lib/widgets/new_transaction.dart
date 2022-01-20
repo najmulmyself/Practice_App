@@ -1,26 +1,32 @@
 import 'package:flutter/material.dart';
 
-class NewTransaction extends StatelessWidget {
-  // const NewTransaction({ Key? key }) : super(key: key);
-  final title = TextEditingController();
-  final amount = TextEditingController();
-//  THIS IS USED TO ACCEPT THE FUNCTION WHICH PASSED FROM ANOTHER FILE;
-//  NEWTRANSACTION REALISED THAT , OKAY HOWEVER I GOT WILL STORE IN ADDTX;
-//  REMEMBER THE CONSTRUCTOR METHOD;
-
+class NewTransaction extends StatefulWidget {
   final Function addTx;
 
   NewTransaction(this.addTx);
+
+  @override
+  State<NewTransaction> createState() => _NewTransactionState();
+}
+
+class _NewTransactionState extends State<NewTransaction> {
+  // const NewTransaction({ Key? key }) : super(key: key);
+  final title = TextEditingController();
+
+  final amount = TextEditingController();
 
 ///////////////////////////////////////////////////
 
   void submitData() {
     final enteredTitle = title.text;
     final enteredAmount = amount.text;
-    addTx(
+    // print(enteredAmount + enteredTitle);
+    widget.addTx(
       enteredTitle,
       double.parse(enteredAmount),
+      // print(enteredAmount + enteredTitle),
     );
+    Navigator.of(context).pop();
   }
 
   @override

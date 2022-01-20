@@ -3,9 +3,6 @@ import 'package:moneyfy/models/transaction.dart';
 import 'package:intl/intl.dart';
 import 'package:moneyfy/widgets/new_transaction.dart';
 import 'package:moneyfy/widgets/transaction_list.dart';
-// import 'package:moneyfy/widgets/user_transaction.dart';
-// import 'package:moneyfy/widgets/transaction_list.dart';
-// import 'package:moneyfy/widgets/user_transaction.dart';
 
 void main() => runApp(MyApp());
 
@@ -61,7 +58,11 @@ class _MyAppState extends State<MyApp> {
         context: context,
         builder: (_) {
           // we can pass underscore (_) in builder.
-          return NewTransaction(_addNewTransaction);
+          return GestureDetector(
+            onTap: () {},
+            behavior: HitTestBehavior.opaque,
+            child: NewTransaction(_addNewTransaction),
+          );
 
           // name of the widget we want to show in the pop up menu. which is NewTransaction()
         });
@@ -73,6 +74,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: Builder(builder: (context) {
+        // need to add builder for separate context.
         return Scaffold(
           appBar: AppBar(
             title: Text('Material App Bar'),
