@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './flex.dart';
 import 'package:moneyfy/models/transaction.dart';
 import 'package:intl/intl.dart';
 import 'package:moneyfy/widgets/new_transaction.dart';
